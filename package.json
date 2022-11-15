@@ -1,0 +1,24 @@
+ent);
+                endWithBlock();
+            }
+            else {
+                emitStatement(ts.visitNode(node, visitor, ts.isStatement));
+            }
+        }
+        function transformAndEmitSwitchStatement(node) {
+            if (containsYield(node.caseBlock)) {
+                // [source]
+                //      switch (x) {
+                //          case a:
+                //              /*caseStatements*/
+                //          case b:
+                //              /*caseStatements*/
+                //          default:
+                //              /*defaultStatements*/
+                //      }
+                //
+                // [intermediate]
+                //  .local _a
+                //  .switch endLabel
+                //      _a = x;
+                //      
