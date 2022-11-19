@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start":"nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Soumendu23/REST-API.git"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "boilrplate",
+    "mongogo",
+    "rest",
+    "express"
+  ],
+  "author": "Soumendu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
