@@ -4,6 +4,9 @@ const cors =require('cors')
 
 const app =express();
 const authRoutes=require('./routes/auth');
-app.use(authRoutes)
+const userRoutes=require('./routes/user');
+
+
+app.use('/user',userRoutes)
 
 app.listen(8000)
